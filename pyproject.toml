@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ielts-ft"
+version = "0.1.0"
+description = "Fine-tuning pipeline for an IELTS Writing Task 2 assessment model (open-source LoRA + OpenAI)"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+packages = ["ielts_ft"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

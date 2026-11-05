@@ -1,0 +1,18 @@
+# Core (Colab already ships most of these; the notebook installs/upgrades the rest)
+transformers>=5.0
+peft>=0.17
+accelerate>=1.0
+datasets>=3.0
+pandas
+openpyxl
+scikit-learn
+rapidfuzz
+pyyaml
+tiktoken
+# Optional
+# bitsandbytes            # 8-bit optimiser / 4-bit QLoRA
+# flash-linear-attention  # fast Gated-DeltaNet kernels for Qwen3.5/3.6/3.8
+# causal-conv1d           # same
+# openai>=1.50            # OpenAI track
+# sentence-transformers   # better near-duplicate prompt detection
+# ipywidgets              # notebook controls
