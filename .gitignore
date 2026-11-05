@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+# Student essays and derived datasets / model weights are kept out of git.
+data/*
+!data/README.md
+outputs/
+*.safetensors
+*.bin
+.env

@@ -1,0 +1,25 @@
+# Default recipe: bf16 LoRA on the text layers of a Qwen3.5-family model. Every key is documented in
+# ielts_ft/train_lora.py (TrainConfig). Override on the command line:  --set lora_r=32 learning_rate=5e-5
+model_name: Qwen/Qwen3.5-4B
+train_file: data/processed/train.jsonl
+val_file: data/processed/validation.jsonl
+output_dir: outputs/ielts-lora
+max_seq_len: 3072
+
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+target_preset: qwen35_all
+use_rslora: true
+use_dora: false
+init_lora_weights: default
+loraplus_lr_ratio: 0
+
+learning_rate: 1.0e-4
+num_train_epochs: 3
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
+warmup_ratio: 0.05
+lr_scheduler_type: cosine
+neftune_noise_alpha: 0
+early_stopping_patience: 2

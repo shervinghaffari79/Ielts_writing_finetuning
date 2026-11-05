@@ -1,0 +1,10 @@
+# Free Colab T4 (16 GB, fp16): small model, short sequences.
+model_name: Qwen/Qwen3.5-2B
+max_seq_len: 2560
+precision: fp16
+lora_r: 16
+lora_alpha: 32
+learning_rate: 1.5e-4
+num_train_epochs: 3
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16

@@ -1,0 +1,13 @@
+# Tiny CPU smoke test: 0.8B model, 4 examples, 3 optimiser steps. Proves the pipeline runs end to end.
+model_name: Qwen/Qwen3.5-0.8B
+output_dir: outputs/smoke
+max_seq_len: 2560
+lora_r: 8
+lora_alpha: 16
+max_train_samples: 6
+max_eval_samples: 2
+max_steps: 3
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 2
+logging_steps: 1
+early_stopping_patience: 0
